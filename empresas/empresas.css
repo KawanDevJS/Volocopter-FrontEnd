@@ -1,0 +1,181 @@
+/* Todos os direitos reservados para Kawan Desenvolvedor Fullstack.2023*/
+/* GITHUB: @kawan3917
+// Trabalho Acadêmico - ANÁLISE E DESENVOLVIMENTO DE SISTEMAS - ITALO BRASILEIRO*/
+
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Geostar&family=Poppins:wght@200;400;500;700&family=Roboto:wght@100&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-padding-top: 2rr;
+  scroll-behavior: smooth;
+}
+
+/* Variáveis */
+:root {
+  --text-color: #021f2a;
+  --bg-color: #022431;
+}
+
+/* Customização Scroll Bar */
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+html::-webkit-scrollbar-track {
+  background: var(--text-color);
+  border-radius: 5rem;
+}
+section {
+  padding: 0 100px;
+}
+
+header {
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 100px;
+  transition: 0.5s;
+}
+header.shadow {
+  background: #fff;
+}
+
+header.shadow .logo {
+  color: var(--text-color);
+}
+
+header.shadow .navbar a {
+  color: var(--text-color);
+}
+
+header.shadow .navbar a::after {
+  background: var(--text-color);
+}
+.logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--bg-color);
+}
+
+.navbar {
+  display: flex;
+  column-gap: 5rem;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--bg-color);
+}
+
+.navbar a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--bg-color);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.4s;
+}
+
+.navbar a:hover::after,
+.navbar .sust-active::after {
+  width: 100%;
+}
+
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 100001;
+  display: none;
+}
+
+/* main*/
+main {
+  position: relative;
+  width: calc(min(90rem, 90%));
+  margin: 0 auto;
+  min-height: 100vh;
+  column-gap: 3rem;
+  padding-block: min(20vh, 3rem);
+}
+
+main > div span {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  color: var(--bg-color--);
+}
+
+main > div h1 {
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.2rem);
+  background-color: var(--text-color);
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+main > div hr {
+  display: block;
+  background: var(--text-color);
+  height: 0.25rem;
+  width: 6.25rem;
+  border: none;
+  margin: 1.125rem 0 1.875rem 0;
+}
+
+main > div p {
+  line-height: 1.6;
+}
+
+main a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-color);
+  font-weight: 500;
+  background: #fff;
+  border-radius: 3rem;
+  transition: 0.3s ease-in-out;
+}
+
+main > div > a {
+  border: 2px solid #c2c2c2;
+  margin-top: 2.05rem;
+  padding: 0.4rem 1.875rem;
+}
+
+.second-text p {
+  font-size: 1.2rem;
+  color: var(--bg-color);
+}
+
+.image-company img {
+  width: 90%;
+  height: 50%;
+}

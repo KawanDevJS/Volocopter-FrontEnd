@@ -1,0 +1,232 @@
+/* Todos os direitos reservados para Kawan Desenvolvedor Fullstack.2023*/
+/* GITHUB: @kawan3917
+// Trabalho Acadêmico - ANÁLISE E DESENVOLVIMENTO DE SISTEMAS - ITALO BRASILEIRO*/
+
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Geostar&family=Poppins:wght@200;400;500;700&family=Roboto:wght@100&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-padding-top: 2rr;
+  scroll-behavior: smooth;
+}
+
+/* Variáveis */
+:root {
+  --text-color: #021f2a;
+  --bg-color: #022431;
+}
+
+/* Customização Scroll Bar */
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+html::-webkit-scrollbar-track {
+  background: var(--text-color);
+  border-radius: 5rem;
+}
+section {
+  padding: 0 100px;
+}
+
+header {
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 100px;
+  transition: 0.5s;
+}
+header.shadow {
+  background: #fff;
+}
+
+header.shadow .logo {
+  color: var(--text-color);
+}
+
+header.shadow .navbar a {
+  color: var(--text-color);
+}
+
+header.shadow .navbar a::after {
+  background: var(--text-color);
+}
+.logo-volo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--bg-color);
+}
+
+.navbar {
+  display: flex;
+  column-gap: 5rem;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--bg-color);
+}
+
+.navbar a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--bg-color);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.4s;
+}
+
+.navbar a:hover::after,
+.navbar .contact-active::after {
+  width: 100%;
+}
+
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 100001;
+  display: none;
+}
+
+/* Custom about FAQ page*/
+body {
+  color: #fff;
+  line-height: 1.6;
+  padding: 0 1.5em;
+}
+
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.logo {
+  text-align: center;
+  font-size: 3em;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--bg-color);
+}
+
+.logo span {
+  color: var(--bg-color);
+}
+
+.contact-wrapper {
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+}
+
+.contact-wrapper > * {
+  padding: 1em;
+}
+
+.contact-form {
+  background: #fff;
+  color: var(--bg-color);
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+  display: block;
+}
+
+.contact-form form p {
+  margin: 0;
+  padding: 1em;
+}
+
+.contact-form form .block {
+  grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  outline: 0;
+  color: var(--bg-color);
+  border-bottom: 1px solid var(--bg-color);
+}
+
+.contact-form form button {
+  background: var(--bg-color);
+  color: #fff;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em;
+  border-radius: 0.7rem;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+  background: rgba(2, 36, 49, 0.308);
+  color: #fff;
+  transition: background-color 1s ease-out;
+  outline: 0;
+  cursor: pointer;
+}
+
+/* CONTACT INFO */
+.contact-info {
+  background: var(--text-color);
+}
+
+.contact-info h4,
+.contact-info ul,
+.contact-info p {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+/* LARGE SIZE */
+
+@media (min-width: 700px) {
+  body {
+    padding: 0 4em;
+  }
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .contact-wrapper > * {
+    padding: 2em;
+  }
+  .contact-info h4,
+  .contact-info ul,
+  .contact-info p {
+    text-align: left;
+  }
+}

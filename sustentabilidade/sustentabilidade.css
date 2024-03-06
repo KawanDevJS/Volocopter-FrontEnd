@@ -1,0 +1,449 @@
+/* Todos os direitos reservados para Kawan Desenvolvedor Fullstack.2023*/
+/* GITHUB: @kawan3917
+// Trabalho Acadêmico - ANÁLISE E DESENVOLVIMENTO DE SISTEMAS - ITALO BRASILEIRO*/
+
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Geostar&family=Poppins:wght@200;400;500;700&family=Roboto:wght@100&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-padding-top: 2rr;
+  scroll-behavior: smooth;
+}
+
+/* Variáveis */
+:root {
+  --text-color: #021f2a;
+  --bg-color: #022431;
+}
+
+/* Customização Scroll Bar */
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+html::-webkit-scrollbar-track {
+  background: var(--text-color);
+  border-radius: 5rem;
+}
+section {
+  padding: 0 100px;
+}
+
+header {
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 100px;
+  transition: 0.5s;
+}
+header.shadow {
+  background: #fff;
+}
+
+header.shadow .logo {
+  color: var(--text-color);
+}
+
+header.shadow .navbar a {
+  color: var(--text-color);
+}
+
+header.shadow .navbar a::after {
+  background: var(--text-color);
+}
+.logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--bg-color);
+}
+
+.navbar {
+  display: flex;
+  column-gap: 5rem;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--bg-color);
+}
+
+.navbar a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--bg-color);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.4s;
+}
+
+.navbar a:hover::after,
+.navbar .sust-active::after {
+  width: 100%;
+}
+
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 100001;
+  display: none;
+}
+
+/* sessão conteúdo de divulgação*/
+
+section .home-content {
+  padding: 4.5rem 0 3rem;
+}
+
+.conteudo {
+  max-width: 1068px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-content {
+  margin-top: 3rem;
+  background: url(../imagens/VoloDeLado.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 440px;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.home-text-content {
+  padding-left: 35px;
+}
+
+.home-text-content h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: -8px;
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serifs;
+}
+
+.divulgation-section h1 {
+  text-align: center;
+}
+
+#divulgationID {
+  font-size: 1rem;
+  font-weight: 200;
+  color: var(--bg-color--);
+}
+
+/* divulgação paris volo*/
+
+.divulgation-title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.divulgation-title span {
+  border-bottom: 3px solid var(--text-color);
+}
+
+.divulgation-text {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 0.2rem;
+  color: #021f2a;
+  text-align: center;
+}
+
+.divulgation-text p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  text-align: center;
+  color: var(--text-color);
+  font-family: Verdana, Tahoma, sans-serif;
+}
+/* main */
+
+main {
+  position: relative;
+  width: calc(min(90rem, 90%));
+  margin: 0 auto;
+  min-height: 100vh;
+  column-gap: 3rem;
+  padding-block: min(20vh, 3rem);
+}
+
+main > div span {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  color: var(--bg-color--);
+}
+
+main > div h1 {
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.2rem);
+  background-color: var(--text-color);
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+main > div hr {
+  display: block;
+  background: var(--text-color);
+  height: 0.25rem;
+  width: 6.25rem;
+  border: none;
+  margin: 1.125rem 0 1.875rem 0;
+}
+
+main > div p {
+  line-height: 1.6;
+}
+
+main a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-color);
+  font-weight: 500;
+  background: #fff;
+  border-radius: 3rem;
+  transition: 0.3s ease-in-out;
+}
+
+main > div > a {
+  border: 2px solid #c2c2c2;
+  margin-top: 2.05rem;
+  padding: 0.4rem 1.875rem;
+}
+
+main > div > a:hover {
+  border: 0.125rem solid var(--text-color);
+  color: var(--text-color);
+}
+
+/* divulgation*/
+
+.services h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.services img {
+  width: 100%;
+  height: 100%;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.services-container .box {
+  text-align: center;
+  padding: 20px;
+}
+
+.services-container .box .bx {
+  padding: 10px;
+  color: var(--text-color);
+  font-size: 28px;
+  background-color: var(--bg-color);
+  border-radius: 4px;
+}
+
+.services-container .box h2 {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.second-text p {
+  font-size: 1.2rem;
+  color: var(--bg-color);
+}
+
+/* footer links and texts*/
+footer {
+  position: relative;
+  width: 100%;
+  background: var(--text-color);
+  min-height: 100px;
+  padding: 10px 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.container-footer {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col {
+  min-width: 250px;
+  color: #f2f2f2f2;
+  font-family: poppins;
+  padding: 1rem;
+}
+
+.col h2 {
+  margin-bottom: 1rem;
+}
+.col .logo {
+  width: 100px;
+  margin-bottom: 25px;
+}
+.col h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+}
+.col h3::after {
+  content: "";
+  height: 3px;
+  width: 0px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+.col h3:hover::after {
+  width: 30px;
+}
+
+.col .social a i {
+  color: var(--bg-color);
+  margin-top: 2rem;
+  margin-right: 5px;
+  transition: 0.3s ease;
+}
+.col .social a i:hover {
+  transform: scale(1.5);
+  filter: grayscale(25);
+}
+.col .links a {
+  display: block;
+  text-decoration: none;
+  color: #f2f2f2;
+  margin-bottom: 5px;
+  position: relative;
+  transition: 0.3s ease;
+}
+.col .links a::before {
+  content: "";
+  height: 16px;
+  width: 3px;
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  background-color: rgb(246, 246, 246);
+  transition: 0.5s ease;
+  opacity: 0;
+}
+.col .links a:hover::before {
+  opacity: 1;
+}
+.col .links a:hover {
+  transform: translateX(-8px);
+  color: #fff;
+}
+
+#socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.9rem;
+}
+
+#socials a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--bg-color--);
+  transition: 0.4s;
+}
+
+footer .social a:hover {
+  transform: translateY(-5px);
+  transition: 0.4s;
+}
+
+#copyright {
+  color: rgba(255, 250, 250, 0.972);
+  font-size: 0.8rem;
+  font-weight: 100;
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Media - responsive to footer*/
+@media (max-width: 900px) {
+  .row {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
